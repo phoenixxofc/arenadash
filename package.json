@@ -1,0 +1,12 @@
+{
+  "name": "arena-dash",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "dev": "npm run dev --workspaces"
+  }
+}

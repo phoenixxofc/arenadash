@@ -1,0 +1,14 @@
+{
+  "name": "@arena-dash/contracts",
+  "version": "1.0.0",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:polygon": "hardhat run scripts/deploy.ts --network polygon"
+  },
+  "devDependencies": {
+    "hardhat": "^2.20.1",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^5.0.1"
+  }
+}
