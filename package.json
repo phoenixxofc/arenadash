@@ -6,7 +6,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build --workspaces",
+    "build": "npm run build -w @arena-dash/engine && npm run build -w vite-web",
     "dev": "npm run dev --workspaces"
   }
 }
