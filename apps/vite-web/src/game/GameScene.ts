@@ -81,7 +81,7 @@ export class GameScene extends Phaser.Scene {
 		);
 
 		const currentEnemyIds = new Set(
-			this.engine.enemies.map((e) => (e as any).id),
+			this.engine.enemies.map((e: any) => e.id),
 		);
 
 		// ✅ FIX: avoid Map iterator issue
@@ -92,12 +92,12 @@ export class GameScene extends Phaser.Scene {
 			}
 		});
 
-		this.engine.enemies.forEach((enemy) => {
-			let graphics = this.enemyGraphics.get((enemy as any).id);
+		this.engine.enemies.forEach((enemy: any) => {
+			let graphics = this.enemyGraphics.get(enemy.id);
 
 			if (!graphics) {
 				graphics = this.add.graphics();
-				this.enemyGraphics.set((enemy as any).id, graphics);
+				this.enemyGraphics.set(enemy.id, graphics);
 			}
 
 			graphics.clear();
