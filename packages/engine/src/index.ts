@@ -55,7 +55,7 @@ export class GameEngine {
   public health: number = 100;
   public omega: number = 1;
 
-  private config: GameConfig;
+  private _config: GameConfig;
   private prng: PRNG;
   private inputLog: PlayerInput[] = [];
   private lastDashFrame: number = -100;
@@ -64,7 +64,8 @@ export class GameEngine {
   private isDashing: boolean = false;
 
   constructor(config: GameConfig) {
-    this.config = config;
+    this._config = config;
+    console.log('Engine initialized with config:', this._config);
     this.prng = new PRNG(config.seed);
     this.engine = Matter.Engine.create({
       enableSleeping: false,
